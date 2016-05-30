@@ -1,2 +1,5 @@
+all:	cat
 cat:	cat.c
-	c99 -Wall -o cat cat.c -L ../lib -lhelpers -Wl,-rpath=../lib -I ../lib
+	gcc $< -o $@
+clean:
+	rm -f cat cat.o cat2.c blob.bin blob2.bin
